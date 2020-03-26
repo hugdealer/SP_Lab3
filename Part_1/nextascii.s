@@ -13,7 +13,8 @@
 message: .asciz "SYSTEM PROGRAMMING Lab Assignment 3 \n"
 nxtasciim: .space 80
 	.text
-_start: movq $1, %rax
+_start: 
+  movq $1, %rax
 	movq $1, %rdi
 	movq $message, %rsi
 	movq $39, %rdx
@@ -22,7 +23,8 @@ _start: movq $1, %rax
 	movq $37, %rcx
 	movq $nxtasciim, %rdi
 	movq $message, %rsi
-up:	movb (%rsi), %al
+up:	
+  movb (%rsi), %al
 	addb $1, %al
 	movb %al, (%rdi)
 	incq %rsi
