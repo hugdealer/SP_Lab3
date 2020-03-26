@@ -46,6 +46,7 @@ _start:
 		#Read list elements from Keyboard by calling scanf
 		movq $listn, %rdx
 		movq n, %rcx
+    subq $8, %rsp
 up:		
 		pushq %rdx
 		pushq %rcx
